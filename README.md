@@ -1,6 +1,6 @@
 # WeRateDogs-Wrangling
-Project: WeRateDogs Twitter Data Wrangling and Analysis
-Introduction:
+## Project: WeRateDogs Twitter Data Wrangling and Analysis
+## Introduction:
 The project’s objective is to wrangle, analyze, and visualize the tweet archive of WeRateDogs using
 three different sources: twitter_archive_enhanced.csv, image_predictions.tsv, and tweet_json.txt.
 Gather:
@@ -12,12 +12,13 @@ each tweet's JSON data using Python's Tweepy library and store each tweet's enti
 JSON data in a file called tweet_json.txt file. However, I was unable to obtain a Twitter
 developer account. Therefore, I used the dataset that was provided by the project and read the
 file using json package.
-Assess:
+
+## Assess:
 The datasets were assessed visually by calling up each dataframe. They were programmatically
 assessed using functions such as .info(), to look at what the data types are and how many rows there
 are, and .duplicated(), to see whether there is any duplicated data. After assessing the datasets both
 visually and programmatically, I found the following quality and tidiness issues:
-Quality:
+### Quality:
 1. In the archive table:
 - There are 181 retweets and 78 replies
 - Erroneous data types(timestamp, retweet_status_timestamp, tweet_id)
@@ -31,7 +32,7 @@ Quality:
 - inconsistent displays for image prediction output
 3. In the tweets table:
 - id is int not string
-Clean:
+### Clean:
 The datasets were then copied to perform data cleaning.
 Tidiness -
 1. The dog stages were merged into one column as they are the variables for the different dog
@@ -58,7 +59,8 @@ the columns were. New names were created to better explain what those columns we
 8. The output from image prediction had inconsistent name displays, where some breeds started
 with an uppercase while others were all lowercase. All the entries were converted to
 lowercase.
-Summary:
+
+## Summary:
 The three datasets were merged into one, as each contained vital information for data analysis. There
 were columns that had consistency issues, wrong data types, incorrect information extracted, or
 information that was not needed. After the data was cleaned, it was saved as
